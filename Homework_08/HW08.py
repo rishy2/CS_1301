@@ -89,7 +89,6 @@ def visitableCountries(countryCodeList):
             return visitable
     return visitable
 
-print(visitableCountries(["IND", "PAK", "UZB"]))
 
 
 
