@@ -48,7 +48,48 @@ def groupAnagrams(stringlist):
             grouped[sorted_word] = [word]
     return grouped
 
-print(groupAnagrams(['rat', 'act', 'stressed', 'desserts', 'cat']))
+# Winter Break Planner
+# Description: Winter Break is almost here, which means you want to start planning some vir-
+# tual hang out sessions with your friends. To do this, you will be creating 2 classes: a Friend
+# class and a Planner class. The implementation of these classes will be explained below.
+
+class Friend:
+    def __init__(self, name, schedule):
+        self.name = name
+        self.schedule = schedule
+
+    def addActivity(self, inputTup):
+        if not inputTup[0] in self.schedule:
+            self.schedule[inputTup[0]] = inputTup[1]
+        else:
+            return "Not possible"
+
+class Planner:
+    def __init__(self, friendsList):
+        self.friendsList = friendsList
+
+    def freeTime(self):
+        temp = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        for x in self.friendsList:
+            for y in x.schedule.keys():
+                if y in temp:
+                    temp.remove(y)
+        if len(temp) == 0:
+            return "No one is free"
+        return temp
+
+    def plans(self, inputDay):
+        days = {}
+        for x in self.friendsList:
+            if inputDay in x.schedule and x.schedule[inputDay] in days:
+                tempList = days[x.schedule[inputDay]]
+                tempList.append(x.name)
+                days[x.schedule[inputDay]] = tempList
+            else:
+                days[x.schedule[inputDay]] = [x.name]
+        return days
+
+
 
 
         
