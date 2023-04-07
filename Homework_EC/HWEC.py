@@ -39,6 +39,19 @@ def bubbleSort(list,length):
 # Returns: grouped anagrams ( dict )
 
 def groupAnagrams(stringlist):
-    pass
+    grouped = {}
+    for index, value in enumerate(stringlist):
+        if value == sorted(value):
+            if value not in grouped:
+                grouped[value] = [value,]
+        if value != sorted(value):
+            if sorted(value) not in grouped:
+                grouped[sorted(value)] = [value,]
+            if sorted(value) in grouped:
+                grouped[sorted(value)].append(value)
+        return grouped
+
+
+
 
         
