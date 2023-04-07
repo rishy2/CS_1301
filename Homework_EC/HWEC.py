@@ -40,18 +40,15 @@ def bubbleSort(list,length):
 
 def groupAnagrams(stringlist):
     grouped = {}
-    for index, value in enumerate(stringlist):
-        if value == sorted(value):
-            if value not in grouped:
-                grouped[value] = [value,]
-        if value != sorted(value):
-            if sorted(value) not in grouped:
-                grouped[sorted(value)] = [value,]
-            if sorted(value) in grouped:
-                grouped[sorted(value)].append(value)
-        return grouped
+    for word in stringlist:
+        sorted_word = ''.join(sorted(word))
+        if sorted_word in grouped:
+            grouped[sorted_word].append(word)
+        elif sorted_word not in grouped:
+            grouped[sorted_word] = [word]
+    return grouped
 
-
+print(groupAnagrams(['rat', 'act', 'stressed', 'desserts', 'cat']))
 
 
         
