@@ -1,6 +1,6 @@
 # CS_1301
 First attempt at Georgia Tech's CS 1301 course done in Python. <br />
-Shoutout to Andrew Friedman @Fried-man
+Shoutout to Andrew Friedman [@Fried-man](https://github.com/Fried-man)
 
 ## Table of Contents
 - [Homework 01 - Functions and Expressions](./Homework_01/)
