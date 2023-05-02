@@ -1,5 +1,5 @@
 # CS_1301
-First attempt at Georgia Tech's CS 1301 course done in Python.
+First attempt at Georgia Tech's CS 1301 course done in Python. <br />
 Shoutout to Andrew Friedman @Fried-man
 
 ## Table of Contents
